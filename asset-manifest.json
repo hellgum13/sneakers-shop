@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hellgum13/sneakers-shop.git/static/css/main.a5416bad.css",
+    "main.js": "/hellgum13/sneakers-shop.git/static/js/main.35c40062.js",
+    "index.html": "/hellgum13/sneakers-shop.git/index.html",
+    "main.a5416bad.css.map": "/hellgum13/sneakers-shop.git/static/css/main.a5416bad.css.map",
+    "main.35c40062.js.map": "/hellgum13/sneakers-shop.git/static/js/main.35c40062.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5416bad.css",
+    "static/js/main.35c40062.js"
+  ]
+}
