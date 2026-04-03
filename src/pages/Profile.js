@@ -1,5 +1,6 @@
-// Profile.js
 import { useNavigate } from 'react-router-dom';
+
+const PUB = process.env.PUBLIC_URL + '/img/';
 
 function Profile({ orders }) {
   const navigate = useNavigate();
@@ -8,15 +9,15 @@ function Profile({ orders }) {
     <div className="content">
       <div className="pageTitle">
         <button className="backButton" onClick={() => navigate('/')}>
-          <img src="/img/Vector.svg" alt="Назад" />
+          <img src={PUB + 'Vector.svg'} alt="Назад" />
         </button>
-        <h1>Мои заказы</h1>
+        <h1>Мои покупки</h1>
       </div>
 
       {orders.length === 0 ? (
         <div className="favEmpty">
-          <img src="/img/noorder.svg" alt="Нет заказов" width={80} height={80} />
-          <h2>Заказов нет</h2>
+          <img src={PUB + 'noorder.svg'} alt="Нет заказов" width={80} height={80} />
+          <h2>Покупок нет</h2>
           <p>Оформите хотя бы один заказ, чтобы он появился здесь.</p>
         </div>
       ) : (
@@ -39,7 +40,7 @@ function Profile({ orders }) {
                         <b>{item.price} р.</b>
                       </div>
                       <div className="orderComplete">
-                        <img src="/img/select.svg" alt="Заказано" />
+                        <img src={PUB + 'select.svg'} alt="Заказано" />
                       </div>
                     </div>
                   </div>

@@ -1,23 +1,26 @@
 import Card from '../components/Card';
 import { useNavigate } from 'react-router-dom';
- 
+
+const PUB = process.env.PUBLIC_URL + '/img/';
+
 function Favorites({ favorites, onFavorite, onPlus, cartItems }) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+
   return (
     <div className="content">
       <div className="content2 d-flex">
-         <div className="pageTitle">
+        <div className="pageTitle">
           <button className="backButton" onClick={() => navigate('/')}>
-            <img width={8} height={8} src="/img/Vector.svg" alt="Назад"/>
+            <img width={8} height={8} src={PUB + 'Vector.svg'} alt="Назад" />
           </button>
-        <h1>Мои закладки</h1>
-      </div>
+          <h1>Мои закладки</h1>
         </div>
- 
+      </div>
+
       {favorites.length === 0 ? (
         <div className="favEmpty">
-          <img src="/img/nofavs.png" alt="Нет закладок" width={80} height={80} />
-          <h2>Закладок нет :( </h2>
+          <img src={PUB + 'nofavs.png'} alt="Нет закладок" width={80} height={80} />
+          <h2>Закладок нет :(</h2>
           <p>Вы ничего не добавляли в закладки</p>
         </div>
       ) : (
@@ -40,5 +43,5 @@ function Favorites({ favorites, onFavorite, onPlus, cartItems }) {
     </div>
   );
 }
- 
+
 export default Favorites;

@@ -1,0 +1,1 @@
+export const IMG = process.env.PUBLIC_URL + '/img/';
